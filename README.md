@@ -29,25 +29,25 @@ index.php - Arquivo principal da aplicação
 
 ## Tabelas e campos do banco de dados
 ```
-# participantes - Tabela que armazena os dados do participante
+* participantes - Tabela que armazena os dados do participante
   Campos:
     ticket - Identificação do participante
     nome - Nome do participante
     email - Email do participante
     empresa - Empresa do participante
 
-# brindes - Tabela de brindes
+* brindes - Tabela de brindes
   Campos:
     brindeId - Identificação do brinde
     descricao - Descrição do brinde
 
-# participantesBrindes - Armazena os nomes dos ganhadores e seus respectivos brindes
+* participantesBrindes - Armazena os nomes dos ganhadores e seus respectivos brindes
   Campos:
     participanteBrindeId - Identificação do sorteio
     ticket - Ticket do participante ganhador
     brindeId - Identificação do brinde sorteado
 
-# participantesExcluidos - Armazena os tickets dos participantes que não devem mais participar dos sorteios
+* participantesExcluidos - Armazena os tickets dos participantes que não devem mais participar dos sorteios
   Campos:
     ticket - Ticket do participante que não será sorteado
 ```
@@ -58,7 +58,9 @@ Assim que a aplicação for acessada no navegador, o primeiro prêmio e o botão
 Clicando no botão sortear, um nome será exibido em uma janela e com isso você pode:
 
 1 - Confirmar o sorteio (neste caso será armazenado o ganhador e o prêmio) e automaticamente o próximo prêmio já será exibido na tela.
+
 2 - Sortear novamente (neste caso um novo nome será exibido e o nome antigo ainda permanecerá na lista, podendo ser sorteado futuramente).
+
 3 - Remover o nome sorteado da listagem (neste caso o nome sorteado será armazenado em uma tabela de eliminados e não mais participará dos sorteios).
 
 ## Melhorias
