@@ -33,8 +33,10 @@ $app->get( '/getToast', function() use( $app, $db ) {
 
 $app->get( '/getRaffleds', function() use( $app, $db ) {
     $sth = $db->query( 'SELECT participantes.ticket, participantesBrindes.participanteBrindeId as pbid, participantes.nome, participantes.email, participantes.empresa, participantes.cpf, brindes.descricao from participantes inner join participantesBrindes on participantes.ticket = participantesBrindes.ticket inner join brindes on participantesBrindes.brindeId = brindes.brindeId order by participantesBrindes.ParticipanteBrindeId asc;' );
-    $raffleds = $sth->fetchAll( PDO::FETCH_ASSOC );
-
+    $raffleds = '';
+    if ($sth) {
+        $raffleds = $sth->fetchAll( PDO::FETCH_ASSOC );
+    }
     echo json_encode( $raffleds );
 });
 

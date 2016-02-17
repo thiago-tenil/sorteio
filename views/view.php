@@ -190,7 +190,7 @@
     <body>
         <div style="background-color: #fea927; overflow: hidden; height: 150px;">
             <div style="width: 170px; overflow: hidden; float: left;"><img src="img/logo.png" style="width: 85%; padding: 15px;"></div>
-            <div style="float: left; font-family: Raleway; font-size: 54px; color: #fff; line-height: 150px;">Web Dev Summit 2015</div>
+            <div style="float: left; font-family: Raleway; font-size: 54px; color: #fff; line-height: 150px;">VR Dev Summit 2016</div>
         </div>
         <div class="container">
             <div id="containerToast" class="container hide">
