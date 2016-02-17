@@ -26,8 +26,10 @@ $app->post( '/saveRaffle', function() use( $app, $db ) {
 
 $app->get( '/getToast', function() use( $app, $db ) {
     $sth = $db->query( 'SELECT * from brindes where brindeId not in ( SELECT brindeId from participantesBrindes ) order by brindeId limit 1;' );
-    $toast = $sth->fetch( PDO::FETCH_ASSOC );
-
+    $toast = "";
+    if ($sth) {
+        $toast = $sth->fetch( PDO::FETCH_ASSOC );
+    }
     echo json_encode( $toast );
 });
 
